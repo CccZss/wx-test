@@ -1,16 +1,23 @@
 <view class="page-body">
-  <live-pusher id="pusher" url="https://weichat.czsheng.cn/" autopush="{{false}}" mode="RTC" bindstatechange="statechange" 
-    style="width: {{windowWidth}}px; height:{{windowHeight-100}}px"
+  <!-- 播放组件  -->
+  <live-player src="{{playUrl}}" mode="RTC" autoplay bindstatechange="playStatechange" binderror="error" 
+    style="width: {{windowWidth}}px; height:{{windowHeight}}px"
   >
     <cover-view class="bt-controls">
-       <cover-view class="bt" wx:if="{{canPusher}}" bindtap="bindStart">
+      <cover-view class="bt start-bt" wx:if="{{canPusher}}" bindtap="bindStart">
         <cover-image class="img" src="./img/camera.png" />
       </cover-view> 
-      <cover-view class="bt" wx:else bindtap="bindStop">
+      <cover-view class="bt stop-bt" wx:else bindtap="bindStop">
         <cover-image class="img" src="./img/close.png" />
       </cover-view>
     </cover-view>
-  </live-pusher>
+    <cover-view class="bt change-bt" bindtap="bindSwitchCamera">
+      <cover-image class="img" src="./img/change.png" />
+    </cover-view>
+  </live-player>
 
-  <view class='bt' bindtap="bindSwitchCamera">切换前后摄像头</view>
+  <!-- 拍摄组件  -->
+  <live-pusher id="pusher" url="{{pushUrl}}" autopush="{{false}}" mode="RTC" bindstatechange="pushStatechange" 
+    style="width: {{windowWidth*0.25}}px; height:{{windowHeight*0.25}}px"
+  ></live-pusher> 
 </view>

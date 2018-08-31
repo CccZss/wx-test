@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/linePusher/linePusher",
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/canvas/canvas",
-    "pages/richText/richText",
-    "pages/linePusher/linePusher"
+    "pages/richText/richText"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

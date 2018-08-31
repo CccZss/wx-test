@@ -2,7 +2,9 @@ Page({
   data: {
     windowWidth: '',
     windowHeight: '',
-    canPusher: true
+    canPusher: true,
+    playUrl: 'rtmp://pull-g.kktv8.com/livekktv/100987038',
+    pushUrl: 'https://domain/push_stream'
   },
   onLoad() {
     var that = this;
@@ -19,7 +21,10 @@ Page({
   onReady(res) {
     this.ctx = wx.createLivePusherContext('pusher')
   },
-  statechange(e) {
+  playStatechange(e) {
+    console.log('live-player code:', e.detail.code)
+  },
+  pushStatechange(e) {
     console.log('live-pusher code:', e.detail.code)
   },
   bindStart() {
@@ -51,7 +56,6 @@ Page({
       }
     })
   },
-  
   bindSwitchCamera() {
     this.ctx.switchCamera({
       success: res => {
@@ -61,5 +65,8 @@ Page({
         console.log('switchCamera fail')
       }
     })
+  },
+  error(e) {
+    console.error('live-player error:', e.detail.errMsg)
   }
 })

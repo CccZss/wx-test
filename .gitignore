@@ -43,3 +43,8 @@ typings/
 sh/
 # ignore test sdk.config.json
 sdk.config.json
+
+client/pages/addCgi
+client/pages/canvas
+client/pages/index
+client/pages/richText
