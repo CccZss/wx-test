@@ -1,0 +1,12 @@
+<canvas canvas-id="shareCanvas" style='width: {{canvasWidth}}px; height: {{canvasHeight}}px; display:block; opacity: 0; position:absolute; top:-2000rpx;'></canvas>
+
+<view wx:if='{{showSharePic}}' class='wrap'>
+ <image src='{{shareImageUrl}}' 
+  style='width: {{canvasWidth*rate}}px; height: {{canvasHeight*rate}}px;'
+  catchtap="previewImage"></image> 
+
+  <view class='button-wrap'>
+    <button open-type="share">邀请回答</button>
+    <button bindtap="saveImageHandel">保存到相册</button>
+  </view>
+</view>

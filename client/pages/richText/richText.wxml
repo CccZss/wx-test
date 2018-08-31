@@ -1,0 +1,9 @@
+<!--pages/richText/richText.wxml-->
+<text>富文本编辑</text>
+<text class='add-photo image-box' bindtap="addImage">添加图片</text>
+<view class='rich-text-box'>
+  <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+  <input class='input-box'></input>
+</view>
+
+<text>{{nodesJson}}</text>

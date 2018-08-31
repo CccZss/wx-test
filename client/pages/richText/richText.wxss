@@ -1,0 +1,17 @@
+.rich-text-box {
+  position: relative;
+  border: 1px solid #dedede;
+  font-size: 30rpx;
+}
+
+.rich-text-box .text {
+  height: 40rpx;
+}
+
+.input-box {
+  position: absolute;
+  width: 100%;
+  top:-5rpx;
+  left:1rpx;
+   background: rgba(0, 0, 0, 0.01) 
+}

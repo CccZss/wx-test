@@ -1,0 +1,55 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx58f574bb8aa218f5",
+	"projectname": "czs%20test",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "富文本编辑",
+					"pathName": "pages/richText/richText",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "视频流",
+					"pathName": "pages/linePusher/linePusher",
+					"query": ""
+				}
+			]
+		}
+	}
+}
